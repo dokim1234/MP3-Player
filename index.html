@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3 player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="music-container">
+
+    <div class="img-container">
+      <img src="images/Brisa.jpg" alt="music-cover" id="cover" class="cover">
+    </div>
+
+    <div class="music-info">
+      <div class="track-name">Brisa</div>
+      <div class="track-artist">Foudeqush</div>
+    </div>
+
+    <div class="time-slider">
+      <div class="slider-times">
+        <div class="current-time">00:00</div>
+      </div>
+      <input type="range" min="1" max="100" value="50" class="seek-slider" id="myRange" onchange="seekTo()">
+      <div class="total-time">00:00</div>
+    </div>
+
+    <div class="controls">
+      <div class="prev" id="btn" onclick="prevSong()">
+        <i class="fas fa-backward"></i>
+      </div>
+      <div class="play" id="btn" onclick="togglePlay()">
+        <i class="fas fa-play"></i>
+      </div>
+      <div class="next" id="btn" onclick="nextSong()">
+        <i class="fas fa-forward"></i>
+      </div>
+      <div class="loop" id="btn" onclick="toggleLoop()">
+        <i class="fas fa-repeat"></i>
+      </div>
+      <div class="shuffle" id="btn" onclick="shuffleTrack()">
+        <i class="fas fa-shuffle"></i>
+      </div>
+
+      <div class="volume">
+          <i class="fa fa-volume-down"></i>
+          <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
